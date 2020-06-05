@@ -20,19 +20,19 @@
 3. Upgrade `pip`: `pip3 install --user --upgrade pip`
 
 4. Pull `libmagic`:
-  * [Windows x64](https://github.com/pidydx/libmagicwin64)
+  * Windows x64: I’ve got you covered there
   * Debian/Ubuntu: `sudo apt-get install libmagic1`
   * Mac: `brew install libmagic`
- 
+
 5. Install `make`:
   * Windows x64:
      * [Visual C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
-     * [Make](http://gnuwin32.sourceforge.net/packages/make.htm)
+     * [Make](http://gnuwin32.sourceforge.net/packages/make.htm) ([How to add to PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/))
   * Debian/Ubuntu: `sudo apt-get install build-essential`
   * Mac: `xcode-select --install`
- 
+
 6. Go to `backend` folder, open a console there and run `make install`
-  
+
 ### Frontend (on your phone)
 
 1. Fetch `app-*-release.apk` from [Releases](https://github.com/limitedeternity/Scanner/releases) (where `*` is your processor architecture) and [install it](https://www.androidpit.com/android-for-beginners-what-is-an-apk-file).
