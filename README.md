@@ -15,19 +15,23 @@
 
 1. Fetch `backend` from [Releases](https://github.com/limitedeternity/Scanner/releases).
 
-2. Install [Python 3](https://wiki.python.org/moin/BeginnersGuide/Download).
+2. Install [Python 3.7](https://wiki.python.org/moin/BeginnersGuide/Download).
 
-3. Pull `libmagic`:
+3. Upgrade `pip`: `pip3 install --user --upgrade pip`
+
+4. Pull `libmagic`:
   * [Windows x64](https://github.com/pidydx/libmagicwin64)
   * Debian/Ubuntu: `sudo apt-get install libmagic1`
   * Mac: `brew install libmagic`
  
-4. Install `make`:
-  * [Windows](http://gnuwin32.sourceforge.net/packages/make.htm)
+5. Install `make`:
+  * Windows x64:
+     * [Visual C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+     * [Make](http://gnuwin32.sourceforge.net/packages/make.htm)
   * Debian/Ubuntu: `sudo apt-get install build-essential`
   * Mac: `xcode-select --install`
  
-5. Go to `backend` folder, open a console there and run `make install`
+6. Go to `backend` folder, open a console there and run `make install`
   
 ### Frontend (on your phone)
 

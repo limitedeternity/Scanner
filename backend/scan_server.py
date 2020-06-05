@@ -59,7 +59,7 @@ t.start()
 # Server requirements
 from flask import Flask, request, send_file
 import io
-import magic
+from magicpatch import magic
 import mimetypes
 
 app = Flask(__name__)
@@ -71,7 +71,8 @@ def scan():
         return "", 400
 
     head = request.stream.read(1024)
-    mime = magic.from_buffer(head, mime = True)
+    mime_detector = magic.Magic(mime = True)
+    mime = mime_detector.from_buffer(head)
     if not mime.startswith("image/"):
         return "", 400
 
