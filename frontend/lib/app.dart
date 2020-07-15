@@ -26,7 +26,7 @@ class ApplicationState extends State<Application> {
     final pickedImage = await ImagePicker().getImage(
       source: getFromCamera ? ImageSource.camera : ImageSource.gallery,
     );
-    return File(pickedImage.path);
+    return pickedImage != null ? File(pickedImage.path) : null;
   }
 
   @override
@@ -140,6 +140,10 @@ class ApplicationState extends State<Application> {
                       child: FloatingActionButton(
                         onPressed: () async {
                           File image = await getImage();
+                          if (image == null) {
+                            return;
+                          }
+
                           int size = await image.length();
 
                           setState(() {
